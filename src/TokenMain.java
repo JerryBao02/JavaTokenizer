@@ -3,14 +3,12 @@ import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.*;
 
-import static java.awt.SystemColor.text;
-
 public class TokenMain {
     public static void main(String[] args){
         String text1 = "";
 
         //add the file path of text.txt on your device
-        String filePath = "Tokenizer/src/text.txt";
+        String filePath = "/Tokenizer/src/text.txt";
 
         try{
             text1 = Files.readString(Paths.get(filePath));
@@ -39,9 +37,9 @@ public class TokenMain {
         Tokenizer_V1 t1 = new Tokenizer_V1(text);
 
         System.out.println(
-                t1.encoder("Dances wild withh"));
+                t1.encoder("Dances wild with"));
 
         System.out.println(
-                t1.decoder(t1.encoder("Dances wild withh")));
+                t1.decoder(t1.encoder("Dances wild with")));
     }
 }

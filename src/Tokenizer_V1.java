@@ -22,7 +22,7 @@ public class Tokenizer_V1 {
     }
 
     public List<Integer> encoder(String text){
-        List<Integer> output = new ArrayList<Integer>();
+        List<Integer> output = new ArrayList<>();
 
         String[] preProcessed = text.split("(?<=\\W)|(?=\\W)");
         String[] filtered = Arrays.stream(preProcessed)
@@ -47,7 +47,7 @@ public class Tokenizer_V1 {
     public String decoder(List<Integer> a){
         String output = "";
         for(int i: a ){
-            output += intToToken.get(i) +" ";
+            output += intToToken.get(i) + " ";
         }
 
 
