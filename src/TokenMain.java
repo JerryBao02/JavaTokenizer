@@ -9,11 +9,12 @@ public class TokenMain {
     public static void main(String[] args){
         String text1 = "";
 
+        //add the file path of text.txt on your device
         String filePath = "Tokenizer/src/text.txt";
 
         try{
             text1 = Files.readString(Paths.get(filePath));
-            System.out.println("Length of Text: " + text1.length());
+            System.out.println("Length of Text: "+text1.length());
             System.out.println(text1);
         } catch (IOException e) {
             e.printStackTrace();
